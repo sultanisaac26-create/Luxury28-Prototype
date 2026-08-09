@@ -73,14 +73,17 @@ export default function Home() {
 
       {/* HERO SECTION */}
       <section className="relative h-screen flex items-center justify-center overflow-hidden">
-        <div className="absolute inset-0 z-0">
-          <Image 
-            src="/hero-watch.png" 
-            alt="Luxury Watch" 
-            fill
-            className="object-cover opacity-60"
-            priority
-          />
+        <div className="absolute inset-0 z-0 bg-background">
+          <video
+            autoPlay
+            loop
+            muted
+            playsInline
+            poster="/hero-watch.png"
+            className="w-full h-full object-cover opacity-60"
+          >
+            <source src="/Homepage/hero-section-video.mp4" type="video/mp4" />
+          </video>
           <div className="absolute inset-0 bg-gradient-to-t from-background via-background/40 to-transparent" />
         </div>
         

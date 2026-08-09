@@ -9,21 +9,52 @@ const inter = Inter({ subsets: ["latin"], variable: "--font-sans" });
 const playfair = Playfair_Display({ subsets: ["latin"], variable: "--font-serif" });
 
 export const metadata: Metadata = {
-  title: 'Luxury28 | Premium Timepieces',
+  metadataBase: new URL('https://luxury28-prototype.vercel.app'),
+  title: {
+    default: 'Luxury28 | Premium Timepieces',
+    template: '%s | Luxury28',
+  },
   description: 'Curated luxury watches. Certified authenticity. Limited availability.',
-  keywords: 'luxury watches, premium timepieces, certified authenticity, rolex, patek philippe, audemars piguet',
-  generator: 'v0.app',
+  keywords: ['luxury watches', 'premium timepieces', 'certified authenticity', 'rolex', 'patek philippe', 'audemars piguet'],
+  authors: [{ name: 'Luxury28 Team' }],
+  creator: 'Luxury28',
+  publisher: 'Luxury28',
   openGraph: {
+    type: 'website',
+    locale: 'en_US',
+    url: 'https://luxury28-prototype.vercel.app/',
+    siteName: 'Luxury28',
     title: 'Luxury28 | Premium Timepieces',
     description: 'Curated luxury watches. Certified authenticity. Limited availability.',
-    type: 'website',
-  },
-  icons: {
-    icon: [
+    images: [
       {
-        url: '/Luxury28.png',
+        url: '/Homepage/hero-section.png',
+        width: 1200,
+        height: 630,
+        alt: 'Luxury28 - Premium Timepieces',
       },
     ],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Luxury28 | Premium Timepieces',
+    description: 'Curated luxury watches. Certified authenticity. Limited availability.',
+    creator: '@luxury28',
+    images: ['/Homepage/hero-section.png'],
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      'max-video-preview': -1,
+      'max-image-preview': 'large',
+      'max-snippet': -1,
+    },
+  },
+  icons: {
+    icon: '/Luxury28.png',
     apple: '/Luxury28.png',
   },
 }
